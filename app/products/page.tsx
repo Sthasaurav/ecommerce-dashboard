@@ -1,7 +1,7 @@
 import { IProducts } from "@/type/products.type";
-import Card from "../components/card";
 import SortSelect from "../components/sortSelect";
 import Link from "next/link";
+import ProductClient from "./productClient";
 
 async function getProducts(sort?: "asc" | "desc", page = 1, limit = 8) {
   const response = await fetch(
@@ -42,17 +42,12 @@ const ProductPage = async ({
       <div className="text-center">
         <h1 className="text-4xl font-extrabold text-gray-800">Products</h1>
 
-        <div className="mb-4 px-8 text-right">
-          <label className="mr-2 text-lg font-semibold">Sort by:</label>
+        <div className="mb-4 flex justify-end gap-4 px-8">
           <SortSelect />
         </div>
       </div>
 
-      <div className="grid grid-cols-2 gap-4 p-2 sm:grid-cols-3 sm:p-8 md:grid-cols-4">
-        {products.map((item) => (
-          <Card key={item.id} product={item} />
-        ))}
-      </div>
+      <ProductClient products={products} />
 
       <div className="mt-8 flex justify-center gap-2">
         {Array.from({ length: totalPages }).map((_, i) => {
