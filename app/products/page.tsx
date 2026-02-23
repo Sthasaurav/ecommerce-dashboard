@@ -38,7 +38,7 @@ const ProductPage = async ({
   const totalPages = Math.ceil(total / 8);
 
   return (
-    <div>
+    <div className="py-8">
       <div className="text-center">
         <h1 className="text-4xl font-extrabold text-gray-800">Products</h1>
 
