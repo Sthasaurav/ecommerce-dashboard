@@ -9,7 +9,7 @@ type CardProps = {
 const Card = ({ product }: CardProps) => {
   return (
     <Link
-      href={`products/${product.id}`}
+      href={`/products/${product.id}`}
       className="group flex h-full flex-col overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
     >
       <div className="relative flex h-48 items-center justify-center bg-gray-50 p-4">
@@ -28,7 +28,7 @@ const Card = ({ product }: CardProps) => {
         <h2 className="hover:text-primary transition-color text-primary s mb-1 line-clamp-1 cursor-pointer text-lg font-semibold">
           {product.title}
         </h2>
-        0
+
         <p className="mb-3 line-clamp-2 text-xs text-gray-500">
           {product.description}
         </p>

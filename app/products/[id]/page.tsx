@@ -3,6 +3,7 @@ import Link from "next/link";
 import { MdKeyboardArrowRight } from "react-icons/md";
 import { FaStar, FaRegStar } from "react-icons/fa";
 import Card from "@/app/components/card";
+import SingleProductActions from "@/app/components/SingleProductActions";
 
 async function getProductDetails(id: string) {
   const res = await fetch(`https://fakestoreapi.com/products/${id}`, {
@@ -104,14 +105,16 @@ const SingleProductPage = async ({
             </p>
           </div>
 
-          <div className="mt-4 flex flex-wrap gap-3">
+          {/* <div className="mt-4 flex flex-wrap gap-3">
             <button className="bg-primary rounded-xl px-6 py-3 text-sm font-semibold text-white transition hover:scale-[1.02] hover:bg-gray-800">
               Add to Cart
             </button>
             <button className="rounded-xl border px-6 py-3 text-sm font-semibold transition hover:bg-gray-100">
               Buy Now
             </button>
-          </div>
+          </div> */}
+
+          <SingleProductActions product={product} />
 
           <div className="mt-3 rounded-xl border bg-gray-50 p-4 text-sm text-gray-600">
             <p>✔ Free delivery within Kathmandu Valley</p>

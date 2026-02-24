@@ -1,3 +1,4 @@
+
 import { IProducts } from "@/type/products.type";
 import SortSelect from "../components/sortSelect";
 import Link from "next/link";
