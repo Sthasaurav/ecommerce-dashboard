@@ -67,7 +67,9 @@ export default function ProductClient({ products }: Props) {
 
         <select
           value={priceSort}
-          onChange={(e) => setPriceSort(e.target.value )}
+          onChange={(e) =>
+            setPriceSort(e.target.value as "high" | "low" | "none")
+          }
           className="rounded border p-2"
         >
           <option value="none">Price: None</option>
