@@ -31,3 +31,17 @@ body {
 .bg-primary {
   @apply bg-[#1235ed];
 }
+
+/* .swiper-scrollbar {
+  @apply margin-top:24px;
+} */
+
+.swiper-scrollbar {
+  position: relative !important;
+  margin-top: 12px;
+}
+
+/* .swiper-scrollbar-horizontal {
+  height: 6px;
+  border-radius: 9999px;
+} */
