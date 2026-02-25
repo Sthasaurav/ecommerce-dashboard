@@ -1,4 +1,3 @@
-
 import { IProducts } from "@/type/products.type";
 import SortSelect from "../components/sortSelect";
 import Link from "next/link";
@@ -43,9 +42,9 @@ const ProductPage = async ({
       <div className="text-center">
         <h1 className="text-4xl font-extrabold text-gray-800">Products</h1>
 
-        <div className="mb-4 flex justify-end gap-4 px-8">
+        {/* <div className="mb-4 flex justify-end gap-4 px-8">
           <SortSelect />
-        </div>
+        </div> */}
       </div>
 
       <ProductClient products={products} />
