@@ -36,3 +36,8 @@ export const CAROUSEL = [
     image: Carousel3.src,
   },
 ];
+
+export const NAV_LINKS = [
+  { name: "Task B", href: "/" },
+  { name: "Task A", href: "/products" },
+];
