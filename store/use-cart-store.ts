@@ -1,3 +1,5 @@
+"use client";
+
 import { ICart, ICartItem } from "@/type/cart.type";
 import { toast } from "react-toastify";
 import { create } from "zustand";
